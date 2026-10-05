@@ -91,6 +91,7 @@ export class Game {
         this.isChecking = false;
         this.moves = 0;
         this.countMovesNode.innerText = this.moves;
+        this.countDoneNode.innerText = 0;
         this.cards.forEach((item) => item.destroy());
         this.cards = this._createCards();
     }
