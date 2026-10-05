@@ -84,13 +84,13 @@ export class Game {
         this.moves++;
         this.countMovesNode.innerText = this.moves;
     }
-    _resetCountMove() {
-        this.moves = 0;
-        this.countMovesNode.innerText = this.moves;
-    }
+    _resetCountMove() {}
 
     newGame() {
-        this._resetCountMove();
+        this.firstCard = null;
+        this.isChecking = false;
+        this.moves = 0;
+        this.countMovesNode.innerText = this.moves;
         this.cards.forEach((item) => item.destroy());
         this.cards = this._createCards();
     }
