@@ -35,7 +35,7 @@ export class Modal {
 
         const list = document.createElement("ul");
         list.className = "leaderboard";
-        if (dataStat.length) {
+        if (dataStat) {
             dataStat.forEach((item, index) => {
                 const listEl = document.createElement("li");
                 listEl.className = "leaderboard__row";
