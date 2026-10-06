@@ -35,7 +35,7 @@
 
 Проект использует **ES-модули** (`import`/`export`), поэтому просто открыть `index.html` двойным кликом не получится — браузер заблокирует загрузку модулей из-за политики CORS. Нужен локальный веб-сервер.
 
-### Вариант 1. Через VS Code + Live Server (самый простой)
+Через VS Code + Live Server (самый простой)
 
 1. Установите расширение [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 2. Откройте папку проекта в VS Code.
