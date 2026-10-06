@@ -70,9 +70,14 @@ export class Modal {
         buttonCloseModal.addEventListener("click", () => this._closeModal());
     }
     _createContentFinishGame() {
+        const countGame = document.querySelector("#count-game").innerText;
         const title = document.createElement("div");
         title.classList.add("modal-title");
         title.innerText = "Поздравляю с победой!";
+        const resultMoves = document.createElement("p");
+        resultMoves.innerText =
+            `Вы справились за ходов: ${countGame}.` || "Ошибка=(";
+        // resultMoves.innerText = this.mo
         const blockButtons = document.createElement("div");
         blockButtons.classList.add("buttons-block");
         const buttonNewGame = document.createElement("button");
@@ -86,7 +91,7 @@ export class Modal {
 
         const modalContent = document.createElement("div");
         modalContent.classList.add("modal-content");
-        modalContent.append(title, blockButtons);
+        modalContent.append(title, resultMoves, blockButtons);
 
         this.modalContent = modalContent;
         this.modal.append(modalContent);
